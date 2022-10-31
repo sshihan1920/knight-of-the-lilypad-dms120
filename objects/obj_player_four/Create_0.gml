@@ -6,8 +6,6 @@ enum PlayerState {
 	Grapple,
 }
 
-// comment
-
 player_state = PlayerState.Idle
 
 // end:		state handling
