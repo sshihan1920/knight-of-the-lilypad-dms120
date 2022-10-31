@@ -4,6 +4,8 @@ key_right = keyboard_check(ord("D"))
 key_up = keyboard_check(ord("W"))
 key_down = keyboard_check(ord("S"))
 
+// comment
+
 var h_move = key_right - key_left
 var v_move = key_down - key_up
 
