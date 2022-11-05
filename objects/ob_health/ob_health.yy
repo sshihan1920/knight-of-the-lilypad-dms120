@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "ob_health",
   "spriteId": {
-    "name": "spr_health",
-    "path": "sprites/spr_health/spr_health.yy",
+    "name": "spr_healthup_fly",
+    "path": "sprites/spr_healthup_fly/spr_healthup_fly.yy",
   },
   "solid": false,
   "visible": true,

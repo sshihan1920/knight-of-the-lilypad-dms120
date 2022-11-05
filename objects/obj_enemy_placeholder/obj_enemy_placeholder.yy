@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_enemy_placeholder",
   "spriteId": {
-    "name": "spr_enemy",
-    "path": "sprites/spr_enemy/spr_enemy.yy",
+    "name": "spr_basicenemy_walk_left",
+    "path": "sprites/spr_basicenemy_walk_left/spr_basicenemy_walk_left.yy",
   },
   "solid": false,
   "visible": true,

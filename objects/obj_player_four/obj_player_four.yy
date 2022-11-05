@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_player_four",
   "spriteId": {
-    "name": "spr_player_idle",
-    "path": "sprites/spr_player_idle/spr_player_idle.yy",
+    "name": "spr_player_walk_down",
+    "path": "sprites/spr_player_walk_down/spr_player_walk_down.yy",
   },
   "solid": false,
   "visible": true,
