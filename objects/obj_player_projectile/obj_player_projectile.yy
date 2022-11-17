@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_player_projectile",
   "spriteId": {
-    "name": "spr_lever_activated",
-    "path": "sprites/spr_lever_activated/spr_lever_activated.yy",
+    "name": "spr_player_spitball",
+    "path": "sprites/spr_player_spitball/spr_player_spitball.yy",
   },
   "solid": false,
   "visible": true,

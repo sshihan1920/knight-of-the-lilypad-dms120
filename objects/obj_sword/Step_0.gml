@@ -25,13 +25,12 @@ fade_timer--;
 if (fade_timer <= 0) {
 	fade_timer = fade_time;
 	
-	part_type_size(obj_particle_setup.particle_type_sword_fade, 2, 2, 0, 0);
+	part_type_size(obj_particle_setup.particle_type_sword_fade, 1, 1, 0, 0);
 	part_type_orientation(obj_particle_setup.particle_type_sword_fade, cur_angle, cur_angle, 0, 0, 0)
 	part_particles_create(obj_particle_setup.particle_system, origin.x - (origin_distance * sin(degtorad(cur_angle))), origin.y -(origin_distance * cos(degtorad(cur_angle))), obj_particle_setup.particle_type_sword_fade, 1);
 }
 
 if (collided_obj != noone) {
-	//show_debug_message(object_get_name(collided_obj.object_index));
 	collided_obj.hp--;
 	collided_obj.knockback(unit_v2(new Vector2(collided_obj.x - origin.x, collided_obj.y - origin.y)), 1);	
 	ds_list_add(collided_list, collided_obj);

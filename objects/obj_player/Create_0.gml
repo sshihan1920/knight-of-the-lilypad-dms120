@@ -4,9 +4,19 @@ enum PlayerState {
 	Attack,
 	Grapple,
 	Jump,
+	Prejump,
+	Postjump,
+}
+
+enum PlayerDirection {
+	Up,
+	Down,
+	Left,
+	Right,
 }
 
 player_state = PlayerState.Idle;
+player_direction = PlayerDirection.Down;
 
 // Create player cursor
 cursor = instance_create_layer(x, y, "cursor", obj_cursor,
@@ -23,16 +33,47 @@ sword = noone;
 function handle_sprite_by_state() {
 	switch player_state {
 		case PlayerState.Idle:
-			sprite_index = spr_player_idle;
+			switch player_direction {
+				case PlayerDirection.Down:
+					sprite_index = spr_player_idol_down;
+					break;
+				case PlayerDirection.Up:
+					sprite_index = spr_player_idol_up;
+					break;
+				case PlayerDirection.Left:
+					sprite_index = spr_player_idol_left;
+					break;
+				case PlayerDirection.Right:
+					sprite_index = spr_player_idol_right;
+					break;
+			}
 			break;
 		case PlayerState.Move:
-			sprite_index = spr_player_moving;
+			switch player_direction {
+				case PlayerDirection.Down:
+					sprite_index = spr_player_walk_down;
+					break;
+				case PlayerDirection.Up:
+					sprite_index = spr_player_walk_up;
+					break;
+				case PlayerDirection.Left:
+					sprite_index = spr_player_walk_left;
+					break;
+				case PlayerDirection.Right:
+					sprite_index = spr_player_walk_right;
+					break;
+			}
+			break;
+		case PlayerState.Jump:
+		case PlayerState.Prejump:
+		case PlayerState.Postjump:
+			sprite_index = spr_player_jumpattack;
 			break;
 		case PlayerState.Attack:
-			sprite_index = spr_player_attacking;
+			//sprite_index = spr_player_attacking;
 			break;
 		case PlayerState.Grapple:
-			sprite_index = spr_player_grappling;
+			//sprite_index = spr_player_grappling;
 			break;
 	}
 }
@@ -57,9 +98,10 @@ function normalize_move_by_state() {
 }
 
 hp		= 6;
-id.sp	= 10; // speed modifier
+id.sp	= 5; // speed modifier
 
 // jump attack values
+held_v			= new Vector2(0, 0);
 jump_exp		= 1.5;
 jump_max_height	= 200;
 jump_time		= 40;

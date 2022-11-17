@@ -33,7 +33,7 @@ if (key_grapple_released) {
 key_projectile = mouse_check_button_pressed(mb_right);
 
 if (key_projectile) {
-	instance_create_layer(x, y, layer, obj_player_projectile,
+	instance_create_layer(x, y - 10, layer, obj_player_projectile,
 	{
 		origin: id,
 		move_v: unit_v2(new Vector2(cursor.x - x, cursor.y - y)),
@@ -58,14 +58,31 @@ if (player_state == PlayerState.Attack && !instance_exists(sword)) {
 key_jump_attack = keyboard_check_pressed(vk_space);
 
 if (key_jump_attack) {
-	player_state = PlayerState.Jump;
+	player_state = PlayerState.Prejump;
 	jump_timer = 0;
+}
+
+if (player_state == PlayerState.Prejump) {
+	if (floor(image_index) == 13) {
+		player_state = PlayerState.Jump;
+		held_v = nmove_v;
+	}
+}
+
+if (player_state == PlayerState.Postjump) {
+	if (floor(image_index) == 23) {
+		player_state = PlayerState.Move;	
+	}
 }
 
 if (player_state == PlayerState.Jump) {
 	if (jump_timer == jump_time) {
-		player_state = PlayerState.Move;
+		player_state = PlayerState.Postjump;
 	}
+	image_index = 20;
+	nmove_v = held_v;
 	y -= jump_max_speed/power_ext(jump_time/2, jump_exp) * power_ext(jump_time/2 - jump_timer, jump_exp);
 	jump_timer++;
 }
+
+show_debug_message(player_state);

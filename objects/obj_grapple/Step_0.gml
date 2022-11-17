@@ -1,6 +1,6 @@
 if ((x > room_width || x < 0 || y > room_height || y < 0)
-	|| (compare_direction_v2(move_v, new Vector2(origin.x - x, origin.y - y))
-	&& point_distance(x, y, origin.x, origin.y) > distance_const)) {
+	|| (compare_direction_v2(move_v, new Vector2(origin.x - x, origin.y - grapple_offset - y))
+	&& point_distance(x, y, origin.x, origin.y - grapple_offset) > distance_const)) {
 	retracting = true;
 }
 
@@ -9,22 +9,22 @@ if (retracting) {
 		if (object_get_parent(target.object_index) == hobj_enemy) target.enemy_state = EnemyState.Move;
 		target = noone;
 	}
-	if (point_distance(x, y, origin.x, origin.y) < distance_const) {
+	if (point_distance(x, y, origin.x, origin.y - grapple_offset) < distance_const) {
 		if (variable_instance_exists(origin, "grapple")) origin.grapple = noone;
 		instance_destroy(id);
 	}
-	nmove_v = scale_v2(unit_v2(new Vector2(origin.x - x, origin.y - y)), sp);
+	nmove_v = scale_v2(unit_v2(new Vector2(origin.x - x, origin.y - grapple_offset - y)), sp);
 	return;
 }
 
 if (target != noone) {
-	if (point_distance(x, y, origin.x, origin.y) < distance_const) {
+	if (point_distance(x, y, origin.x, origin.y - grapple_offset) < distance_const) {
 		if (variable_instance_exists(origin, "grapple")) origin.grapple = noone;
 		if (object_get_parent(target.object_index) == hobj_enemy) target.enemy_state = EnemyState.Move;
 		instance_destroy(id);
 	}
 	halt();
-	var grapple_direction = new Vector2(target.x - origin.x, target.y - origin.y);
+	var grapple_direction = new Vector2(target.x - origin.x, target.y - origin.y - grapple_offset);
 	var grapple_distance = min(magnitude_v2(grapple_direction), grapple_distance_scale);
 	var grapple_vector = scale_v2(unit_v2(grapple_direction), (grapple_distance/grapple_distance_scale) * grapple_sp);
 	
@@ -71,5 +71,5 @@ if (collided_obj != noone) {
 		target.enemy_state = EnemyState.Special;
 	}
 	
-	grapple_distance_scale = point_distance(origin.x, origin.y, target.x, target.y);
+	grapple_distance_scale = point_distance(origin.x, origin.y - grapple_offset, target.x, target.y);
 }
