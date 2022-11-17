@@ -32,15 +32,15 @@ if (instance_exists(target)) {
 	
 	if (origin.grapple_weight > target.grapple_weight) {
 		add_to_mod_v(negative_v2(grapple_vector), target);
-		target.interp_mod = 0.1;
+		target.interp_mod = 0.05;
 	} else if (origin.grapple_weight < target.grapple_weight) {
 		add_to_mod_v(grapple_vector, origin);
-		origin.interp_mod = 0.1;
+		origin.interp_mod = 0.05;
 	} else {
 		add_to_mod_v(scale_v2(grapple_vector, 0.5), origin);
 		add_to_mod_v(scale_v2(grapple_vector, -0.5), target);
-		target.interp_mod = 0.1;
-		origin.interp_mod = 0.1;
+		target.interp_mod = 0.05;
+		origin.interp_mod = 0.05;
 	}
 	return;
 }
@@ -73,4 +73,11 @@ if (instance_exists(collided_obj)) {
 	}
 	
 	grapple_distance_scale = point_distance(origin.x, origin.y - grapple_offset, target.x, target.y);
+}
+
+move_timer--;
+if (move_timer != 0) {
+	nmove_v = move_v;	
+} else {
+	move_timer = move_time;	
 }

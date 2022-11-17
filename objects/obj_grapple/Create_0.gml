@@ -5,6 +5,9 @@ if (!variable_instance_exists(id, "origin"))		origin			= noone;
 retracting = false;
 distance_const = sprite_half_size * 2;
 
+move_time = 5;
+move_timer = move_time;
+
 grapple_distance_scale = 0;
 grapple_sp = 10;
 grapple_offset = 6;
@@ -12,7 +15,7 @@ grapple_max_distance = 300;
 
 event_inherited();
 
-id.interp_mod	= 0.01;
-id.interp_const = 0.01;
+id.interp_mod	= 0.05;
+id.interp_const = 0.05;
 id.step_val		= 0.25;
 id.sp			= 15; 
