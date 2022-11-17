@@ -6,7 +6,13 @@ enum EnemyState {
 	Knockback,
 }
 
+enum EnemyDirection {
+	Left,
+	Right,
+}
+
 enemy_state = EnemyState.Idle;
+enemy_direction = EnemyDirection.Left;
 
 hp = 2;
 
@@ -39,7 +45,7 @@ function knockback(vector, scale) {
 }
 
 kb_exp		= 2;
-kb_max_sp	= 20;
+kb_max_sp	= 5;
 kb_time		= 20;
 kb_timer	= 0;
 kb_vector	= new Vector2(0, 0);

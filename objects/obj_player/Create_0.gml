@@ -30,6 +30,8 @@ grapple_weight	= GrappleWeight.Neutral;
 // Instantiate empty sword
 sword = noone;
 
+projectile_offset = 6;
+
 function handle_sprite_by_state() {
 	switch player_state {
 		case PlayerState.Idle:
@@ -98,7 +100,7 @@ function normalize_move_by_state() {
 }
 
 hp		= 6;
-id.sp	= 5; // speed modifier
+id.sp	= 3; // speed modifier
 
 // jump attack values
 held_v			= new Vector2(0, 0);

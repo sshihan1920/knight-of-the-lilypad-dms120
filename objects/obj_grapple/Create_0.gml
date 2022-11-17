@@ -6,13 +6,13 @@ retracting = false;
 distance_const = sprite_half_size * 2;
 
 grapple_distance_scale = 0;
-grapple_sp = 20;
-
+grapple_sp = 10;
 grapple_offset = 6;
+grapple_max_distance = 300;
 
 event_inherited();
 
 id.interp_mod	= 0.01;
 id.interp_const = 0.01;
 id.step_val		= 0.25;
-id.sp			= 30;
+id.sp			= 15; 

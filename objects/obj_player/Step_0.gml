@@ -33,10 +33,10 @@ if (key_grapple_released) {
 key_projectile = mouse_check_button_pressed(mb_right);
 
 if (key_projectile) {
-	instance_create_layer(x, y - 10, layer, obj_player_projectile,
+	instance_create_layer(x, y - projectile_offset, layer, obj_player_projectile,
 	{
 		origin: id,
-		move_v: unit_v2(new Vector2(cursor.x - x, cursor.y - y)),
+		move_v: unit_v2(new Vector2(cursor.x - x, cursor.y - y - projectile_offset)),
 	});
 }
 
