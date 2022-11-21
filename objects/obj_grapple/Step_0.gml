@@ -8,7 +8,7 @@ if ((x > room_width || x < 0 || y > room_height || y < 0)
 
 if (retracting) {
 	if (instance_exists(target)) {
-		if (object_get_parent(target.object_index) == hobj_enemy) target.enemy_state = EnemyState.Move;
+		if (object_get_parent(target.object_index) == abstract_obj_enemy) target.enemy_state = EnemyState.Move;
 		target = noone;
 	}
 	if (point_distance(x, y, origin.x, origin.y - grapple_offset) < distance_const) {
@@ -22,7 +22,7 @@ if (retracting) {
 if (instance_exists(target)) {
 	if (point_distance(x, y, origin.x, origin.y - grapple_offset) < distance_const) {
 		if (variable_instance_exists(origin, "grapple")) origin.grapple = noone;
-		if (object_get_parent(target.object_index) == hobj_enemy) target.enemy_state = EnemyState.Move;
+		if (object_get_parent(target.object_index) == abstract_obj_enemy) target.enemy_state = EnemyState.Move;
 		instance_destroy(id);
 	}
 	halt();
@@ -49,7 +49,7 @@ nmove_v = scale_v2(unit_v2(new Vector2(follow_target.x - x, follow_target.y - y)
 
 var collided_obj = noone;
 var collision_list = ds_list_create();
-collision_point_list(x, y, hobj_grappleable, false, true, collision_list, false);
+collision_point_list(x, y, abstract_obj_grappleable, false, true, collision_list, false);
 for (i = 0; i < ds_list_size(collision_list); i++) {
 	var obj = collision_list[| i];
 	if (obj != id && obj != origin && obj.object_index != obj_grapple) {
@@ -68,7 +68,7 @@ if (instance_exists(collided_obj)) {
 		retracting = true;
 		halt();
 		return;
-	} else if (object_get_parent(target.object_index) == hobj_enemy) {
+	} else if (object_get_parent(target.object_index) == abstract_obj_enemy) {
 		target.enemy_state = EnemyState.Special;
 	}
 	

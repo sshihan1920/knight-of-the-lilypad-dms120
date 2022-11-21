@@ -17,3 +17,9 @@ function handle_sprite_by_state() {
 			break;
 	}
 }
+
+// attack handling
+attack_frame	= 8;
+attack_time		= 20;
+attack_timer	= attack_time;
+attack_hitbox	= noone;

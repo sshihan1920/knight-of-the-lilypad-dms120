@@ -11,20 +11,20 @@ if (target == noone) {
 	var intersect_y = (target.y - y) * t + y;
 	var in_radius	= point_distance(x, y, target.x, target.y) < ranged_pathing_radius;
 	
-	if (point_distance(x, y, intersect_x, intersect_y) > ranged_pathing_radius/4 || place_meeting(x + move_v.x, y + move_v.y, hobj_grappleable)) {
+	if (point_distance(x, y, intersect_x, intersect_y) > ranged_pathing_radius/4 || place_meeting(x + move_v.x, y + move_v.y, abstract_obj_grappleable)) {
 		if (!in_radius) {
-			mp_potential_path_object(path, target.x, target.y, 5, 2, hobj_grappleable);
+			mp_potential_path_object(path, target.x, target.y, 5, 2, abstract_obj_grappleable);
 			var path_point = path_get_number(path) - 1;
 			nmove_v = scale_v2(unit_v2(new Vector2(path_get_point_x(path, path_point) - x, path_get_point_y(path, path_point) - y)), sp);
-			while(place_meeting(x + nmove_v.x, y + nmove_v.y, hobj_grappleable)) {
+			while(place_meeting(x + nmove_v.x, y + nmove_v.y, abstract_obj_grappleable)) {
 				nmove_v = scale_v2(unit_v2(new Vector2(path_get_point_x(path, path_point) - x, path_get_point_y(path, path_point) - y)), sp);
 				path_point--;
 			}
 		} else {
-			mp_potential_path_object(path, x + (x - target.x), y + (y - target.y), 5, 2, hobj_grappleable);
+			mp_potential_path_object(path, x + (x - target.x), y + (y - target.y), 5, 2, abstract_obj_grappleable);
 			var path_point = path_get_number(path) - 1;
 			nmove_v = scale_v2(unit_v2(new Vector2(path_get_point_x(path, path_point) - x, path_get_point_y(path, path_point) - y)), sp);
-			while(place_meeting(x + nmove_v.x, y + nmove_v.y, hobj_grappleable)) {
+			while(place_meeting(x + nmove_v.x, y + nmove_v.y, abstract_obj_grappleable)) {
 				nmove_v = scale_v2(unit_v2(new Vector2(path_get_point_x(path, path_point) - x, path_get_point_y(path, path_point) - y)), sp);
 				path_point--;
 			}
@@ -32,7 +32,7 @@ if (target == noone) {
 	} else if (zero_v2(move_v)){
 		var path_point = path_get_number(path) - 1;
 		nmove_v = scale_v2(unit_v2(new Vector2(path_get_point_x(path, path_point) - x, path_get_point_y(path, path_point) - y)), sp);
-		while(place_meeting(x + nmove_v.x, y + nmove_v.y, hobj_grappleable)) {
+		while(place_meeting(x + nmove_v.x, y + nmove_v.y, abstract_obj_grappleable)) {
 			nmove_v = scale_v2(unit_v2(new Vector2(path_get_point_x(path, path_point) - x, path_get_point_y(path, path_point) - y)), sp);
 			path_point--;
 		}

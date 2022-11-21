@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "hobj_player_attack",
-    "path": "objects/hobj_player_attack/hobj_player_attack.yy",
+    "name": "abstract_obj_player_attack",
+    "path": "objects/abstract_obj_player_attack/abstract_obj_player_attack.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

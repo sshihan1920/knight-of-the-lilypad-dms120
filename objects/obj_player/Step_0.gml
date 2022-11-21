@@ -76,13 +76,16 @@ if (player_state == PlayerState.Postjump) {
 }
 
 if (player_state == PlayerState.Jump) {
-	if (jump_timer == jump_time) {
-		player_state = PlayerState.Postjump;
-	}
 	image_index = 20;
 	nmove_v = held_v;
 	y -= jump_max_speed/power_ext(jump_time/2, jump_exp) * power_ext(jump_time/2 - jump_timer, jump_exp);
 	jump_timer++;
-}
 
-show_debug_message(player_state);
+	if (jump_timer == jump_time + 1) {
+		instance_create_layer(x, y, layer, obj_jump_attack,
+		{
+			origin: id,
+		});
+		player_state = PlayerState.Postjump;
+	}
+}

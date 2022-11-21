@@ -28,3 +28,8 @@ cur_angle = starting_angle;
 // handle particle trail
 fade_time = 3;
 fade_timer = fade_time;
+
+function on_hit(obj) {
+	obj.hp--;
+	obj.knockback(unit_v2(new Vector2(obj.x - origin.x, obj.y - origin.y)), 1);	
+}

@@ -9,8 +9,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "hobj_enemy",
-    "path": "objects/hobj_enemy/hobj_enemy.yy",
+    "name": "abstract_obj_enemy",
+    "path": "objects/abstract_obj_enemy/abstract_obj_enemy.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

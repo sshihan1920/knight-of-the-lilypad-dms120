@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "hobj_mobile",
-    "path": "objects/hobj_mobile/hobj_mobile.yy",
+    "name": "abstract_obj_mobile",
+    "path": "objects/abstract_obj_mobile/abstract_obj_mobile.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
