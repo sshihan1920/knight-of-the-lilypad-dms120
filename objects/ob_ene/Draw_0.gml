@@ -2,6 +2,7 @@
 /// @DnDVersion : 1
 /// @DnDHash : 72981801
 /// @DnDArgument : "font" "fn_story"
+/// @DnDSaveInfo : "font" "fn_story"
 draw_set_font(fn_story);
 
 /// @DnDAction : YoYo Games.Common.Execute_Code

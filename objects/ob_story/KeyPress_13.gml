@@ -2,6 +2,7 @@
 /// @DnDVersion : 1
 /// @DnDHash : 7D0C91C3
 /// @DnDArgument : "room" "rm_room1"
+/// @DnDSaveInfo : "room" "rm_room1"
 room_goto(rm_room1);
 
 /// @DnDAction : YoYo Games.Common.Execute_Code
