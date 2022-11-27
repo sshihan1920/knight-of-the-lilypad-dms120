@@ -28,3 +28,4 @@ cur_angle = starting_angle;
 // handle particle trail
 fade_time = 3;
 fade_timer = fade_time;
+audio_play_sound(so_player_attack, 4, false);

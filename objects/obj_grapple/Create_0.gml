@@ -18,4 +18,5 @@ event_inherited();
 id.interp_mod	= 0.05;
 id.interp_const = 0.05;
 id.step_val		= 0.25;
-id.sp			= 15; 
+id.sp			= 15;
+audio_play_sound(so_grapple, 4, false);

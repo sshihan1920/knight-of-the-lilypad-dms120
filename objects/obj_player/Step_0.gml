@@ -78,6 +78,7 @@ if (player_state == PlayerState.Postjump) {
 if (player_state == PlayerState.Jump) {
 	if (jump_timer == jump_time) {
 		player_state = PlayerState.Postjump;
+		audio_play_sound(sn_slam, 5, false);
 	}
 	image_index = 20;
 	nmove_v = held_v;
