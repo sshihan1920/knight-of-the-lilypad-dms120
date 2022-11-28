@@ -10,3 +10,5 @@ function on_hit(obj) {
 	obj.hp--;
 	obj.knockback(unit_v2(move_v), 1.5);
 }
+
+audio_play_sound(snd_player_proj, 4, false);

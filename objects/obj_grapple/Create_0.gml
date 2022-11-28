@@ -19,3 +19,5 @@ interp_mod = 0.05;
 interp_const = 0.05;
 step_val = 0.25;
 sp = 15;
+
+audio_play_sound(snd_grapple, 4, false);

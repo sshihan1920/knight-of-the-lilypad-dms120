@@ -37,7 +37,3 @@ if (!collidable) {
 
 x = clamp(x, sprite_half_size, room_width - sprite_half_size);
 y = clamp(y, sprite_half_size, room_height - sprite_half_size);
-
-if (hp <= 0) {
-	room_goto(rm_death_screen);	
-}

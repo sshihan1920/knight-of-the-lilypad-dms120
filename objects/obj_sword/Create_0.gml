@@ -33,3 +33,5 @@ function on_hit(obj) {
 	obj.hp--;
 	obj.knockback(unit_v2(new Vector2(obj.x - origin.x, obj.y - origin.y)), 1);	
 }
+
+audio_play_sound(snd_attack, 4, false);

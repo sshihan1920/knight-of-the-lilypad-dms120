@@ -82,6 +82,7 @@ if (key_jump_attack && jump_cd_timer == 0) {
 
 if (player_state == PlayerState.Prejump) {
 	if (floor(image_index) == 12) {
+		audio_play_sound(snd_jump, 4, false);
 		collidable = false;
 		player_state = PlayerState.Jump;
 		held_v = nmove_v;
@@ -106,6 +107,7 @@ if (player_state == PlayerState.Prejump) {
 			origin: id,
 		});
 		screenshake(20, 5, 0.3);
+		audio_play_sound(snd_slam, 4, false);
 		player_state = PlayerState.Postjump;
 	}
 } else {
