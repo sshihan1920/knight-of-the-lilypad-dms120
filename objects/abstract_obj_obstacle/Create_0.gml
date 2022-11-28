@@ -1,0 +1,1 @@
+grapple_weight = GrappleWeight.Heavy

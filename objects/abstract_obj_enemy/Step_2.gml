@@ -1,34 +1,21 @@
 event_inherited();
 
-if (knockbacked) {
-	var t_scale = (-power(kb_timer/(kb_time/power(kb_max_sp, 1/kb_exp)), kb_exp) + kb_max_sp) * kb_rscale;
-	var t_vec = scale_v2(kb_vector, t_scale);
-	x += t_vec.x;
-	y += t_vec.y;
-	kb_timer++;
-	delete(t_vec);
-	if (t_scale == 0) {
-		kb_timer = 0;
-		knockbacked = false;
-	}
-}
-
 if (stunned) {
-	show_debug_message("stunned");
 	st_timer--;
 	if (st_timer == 0) {
 		stunned = false;
 	}
 }
 
-if (!handle_collision_x(obj_player) && !handle_collision_x(abstract_obj_enemy) && !stunned) {
-	show_debug_message("moving");
-	x += cur_v.x;
-}
-
-if (!handle_collision_y(obj_player) && !handle_collision_y(abstract_obj_enemy) && !stunned) {
-	show_debug_message("moving");
-	y += cur_v.y;
+if (!stunned) {
+	if (!handle_collision_x(obj_player, cur_v) && !handle_collision_x(abstract_obj_grappleable, cur_v)) {
+		x += cur_v.x;
+	}
+	if (!handle_collision_y(obj_player, cur_v) && !handle_collision_y(abstract_obj_grappleable, cur_v)) {
+		y += cur_v.y;	
+	}
+	handle_collision_push(obj_player);
+	handle_collision_push(abstract_obj_grappleable);
 }
 
 if (equals_v2(cur_v, new Vector2(0, 0)) && enemy_state == EnemyState.Move)
@@ -48,5 +35,5 @@ y = clamp(y, sprite_half_size, room_height - sprite_half_size);
 if (hp <= 0) {
 	// enter death state
 	// handle death anim
-	instance_destroy(id);
+	instance_destroy();
 }

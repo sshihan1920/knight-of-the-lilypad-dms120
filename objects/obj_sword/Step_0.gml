@@ -3,7 +3,7 @@ event_inherited();
 if ((cur_angle < final_angle && cur_angle + angle_increment > final_angle)
 	|| (cur_angle > final_angle && cur_angle + angle_increment < final_angle)
 	|| cur_angle == final_angle) {
-	instance_destroy(id);
+	instance_destroy();
 }
 
 var increment = angle_increment * (1 - angle_accumulator / (2 * swing_half_radius));

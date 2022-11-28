@@ -13,7 +13,7 @@ if (retracting) {
 	}
 	if (point_distance(x, y, origin.x, origin.y - grapple_offset) < distance_const) {
 		if (variable_instance_exists(origin, "grapple")) origin.grapple = noone;
-		instance_destroy(id);
+		instance_destroy();
 	}
 	nmove_v = scale_v2(unit_v2(new Vector2(origin.x - x, origin.y - grapple_offset - y)), sp);
 	return;
@@ -23,7 +23,7 @@ if (instance_exists(target)) {
 	if (point_distance(x, y, origin.x, origin.y - grapple_offset) < distance_const) {
 		if (variable_instance_exists(origin, "grapple")) origin.grapple = noone;
 		if (object_get_parent(target.object_index) == abstract_obj_enemy) target.enemy_state = EnemyState.Move;
-		instance_destroy(id);
+		instance_destroy();
 	}
 	halt();
 	var grapple_direction = new Vector2(target.x - origin.x, target.y - origin.y - grapple_offset);

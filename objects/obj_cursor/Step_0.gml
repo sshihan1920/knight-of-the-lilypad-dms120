@@ -1,2 +1,2 @@
-x = follow_target.x;
-y = follow_target.y;
+x = mouse_x;
+y = mouse_y;

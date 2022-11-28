@@ -11,8 +11,8 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 3,
-  "bbox_right": 28,
-  "bbox_top": 7,
+  "bbox_right": 27,
+  "bbox_top": 11,
   "bbox_bottom": 23,
   "HTile": false,
   "VTile": false,
@@ -29,9 +29,9 @@
   "gridY": 0,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2a1f52c9-7362-41f5-a66c-acfbd68f0f5a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f9c12e0d-9e59-401d-abe1-b9aface73ace",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"abf8c4bb-667e-4769-96d0-b37783c119b8",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"761413c8-0d55-468c-9e4c-b2d5168bf07c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2372f0d3-cf7b-497e-adc4-d57d26dc48b5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"144c71d9-818a-4d40-adc5-b135f0ff6bb0",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -49,9 +49,9 @@
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"8c3d5b7b-9b47-44f8-bd33-be8715042231","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2a1f52c9-7362-41f5-a66c-acfbd68f0f5a","path":"sprites/spr_healthup_fly/spr_healthup_fly.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"c53ecbad-f3b0-43d4-85fb-d7907db1a893","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"abf8c4bb-667e-4769-96d0-b37783c119b8","path":"sprites/spr_healthup_fly/spr_healthup_fly.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"85b50e5d-ce43-4101-9086-53666f7482bb","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"761413c8-0d55-468c-9e4c-b2d5168bf07c","path":"sprites/spr_healthup_fly/spr_healthup_fly.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"dd52ad48-b780-4c59-a1b6-5fda3eef4584","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2372f0d3-cf7b-497e-adc4-d57d26dc48b5","path":"sprites/spr_healthup_fly/spr_healthup_fly.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8727e814-4c57-4c24-8e30-ccc817073f58","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f9c12e0d-9e59-401d-abe1-b9aface73ace","path":"sprites/spr_healthup_fly/spr_healthup_fly.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c53ecbad-f3b0-43d4-85fb-d7907db1a893","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"abf8c4bb-667e-4769-96d0-b37783c119b8","path":"sprites/spr_healthup_fly/spr_healthup_fly.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1413c187-6806-4e77-b903-8d627bef0c5d","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"144c71d9-818a-4d40-adc5-b135f0ff6bb0","path":"sprites/spr_healthup_fly/spr_healthup_fly.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,

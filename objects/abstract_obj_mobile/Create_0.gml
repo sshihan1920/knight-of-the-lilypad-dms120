@@ -17,7 +17,7 @@ Change magnitude is calculated by as strict vector difference, not by arclength
 	of the rotation (makes opposite directional changes feel better) 
 */
 
-special_speed_cap	= 20; // speed cap for special states
+special_speed_cap	= 5; // speed cap for special states
 step_val			= 0.1; // time value of a frame
 time_scale			= 0; // rotation duration
 //max_time_scale	= 10;
@@ -54,26 +54,72 @@ function halt() {
 	mod_v	= new Vector2(0, 0);
 }
 
-function handle_collision_x(obj_type) {
-	if (place_meeting(x + cur_v.x, y, obj_type)) {
-		while(!place_meeting(x + sign(cur_v.x), y, obj_type)) {
-			x = x + sign(cur_v.x);	
+collidable = true;
+
+function handle_collision_push(obj_type) {
+	var buffer = 1000;
+	if (!place_meeting(x, y, obj_type)) return;
+	while(buffer > 0) {
+		buffer--;
+		var collided_obj = instance_place(x, y, obj_type);
+		if (variable_instance_exists(collided_obj, "collidable") && !collided_obj.collidable) {
+			continue;
+		}
+		if (instance_exists(collided_obj)) {
+			var push_v = new Vector2(x - collided_obj.x, y - collided_obj.y);
+			while(place_meeting(x, y, collided_obj)) {
+				x = x + sign(push_v.x);
+				y = y + sign(push_v.y);
+			}
+		} else {
+			break;
+		}
+	}
+}
+
+function handle_collision_x(obj_type, v) {
+	if (place_meeting(x + v.x, y, obj_type)) {
+		for (i = 0; i < abs(v.x) && !place_meeting(x + sign(v.x), y, obj_type); i++) {
+			x = x + sign(v.x);	
+		}
+		return true;
+	}
+	return false;
+}
+	
+function handle_collision_y(obj_type, v) {
+	if (place_meeting(x, y + v.y, obj_type)) {
+		for (i = 0; i < abs(v.y) && !place_meeting(x, y + sign(v.y), obj_type); i++) {
+			y = y + sign(v.y);
 		}
 		return true;
 	}
 	return false;
 }
 
-function handle_collision_y(obj_type) {
-	if (place_meeting(x, y + cur_v.y, obj_type)) {
-		while(!place_meeting(x, y + sign(cur_v.y), obj_type)) {
-			y = y + sign(cur_v.y);	
-		}
-		return true;
-	}
-	return false;
-}
 
 function normalize_move_by_state() {}
+
+// knockback handling
+function knockback(vector, scale) {
+	knockbacked = true;
+	kb_vector	= vector;
+	kb_scale	= scale;
+	kb_timer	= 0;
+	
+	kb_rscale	= (kb_scale + kb_pscale)/2
+}
+
+knockbacked = false;
+kb_exp		= 2;
+kb_max_sp	= 5;
+kb_time		= 20;
+kb_timer	= 0;
+kb_vector	= new Vector2(0, 0);
+// scale for different knockback intensity
+kb_scale	= 1;
+// pscale for scaling by enemy types 
+kb_pscale	= 1;
+kb_rscale	= 0;
 
 event_inherited();
