@@ -102,6 +102,7 @@
     {"id":{"name":"spr_circular_hitbox","path":"sprites/spr_circular_hitbox/spr_circular_hitbox.yy",},"order":51,},
     {"id":{"name":"Macros","path":"scripts/Macros/Macros.yy",},"order":1,},
     {"id":{"name":"spr_roomborder","path":"sprites/spr_roomborder/spr_roomborder.yy",},"order":25,},
+    {"id":{"name":"spr_acid_puddle","path":"sprites/spr_acid_puddle/spr_acid_puddle.yy",},"order":67,},
     {"id":{"name":"obj_enemy_projectile","path":"objects/obj_enemy_projectile/obj_enemy_projectile.yy",},"order":32,},
     {"id":{"name":"spr_slimeenemy_walk_right","path":"sprites/spr_slimeenemy_walk_right/spr_slimeenemy_walk_right.yy",},"order":47,},
     {"id":{"name":"spr_heart_empty","path":"sprites/spr_heart_empty/spr_heart_empty.yy",},"order":52,},
