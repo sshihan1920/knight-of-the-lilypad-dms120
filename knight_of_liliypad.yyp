@@ -27,6 +27,7 @@
     {"id":{"name":"spr_healthup_fly","path":"sprites/spr_healthup_fly/spr_healthup_fly.yy",},"order":17,},
     {"id":{"name":"spr_projectile_indicator","path":"sprites/spr_projectile_indicator/spr_projectile_indicator.yy",},"order":61,},
     {"id":{"name":"snd_boss","path":"sounds/snd_boss/snd_boss.yy",},"order":8,},
+    {"id":{"name":"spr_titlescreen","path":"sprites/spr_titlescreen/spr_titlescreen.yy",},"order":66,},
     {"id":{"name":"spr_player_spitball","path":"sprites/spr_player_spitball/spr_player_spitball.yy",},"order":44,},
     {"id":{"name":"spr_player_idle_up","path":"sprites/spr_player_idle_up/spr_player_idle_up.yy",},"order":42,},
     {"id":{"name":"snd_death","path":"sounds/snd_death/snd_death.yy",},"order":7,},
