@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_enemy_snake",
   "spriteId": {
-    "name": "spr_snakeenemy_walk",
-    "path": "sprites/spr_snakeenemy_walk/spr_snakeenemy_walk.yy",
+    "name": "spr_snakeenemy_walk_right",
+    "path": "sprites/spr_snakeenemy_walk_right/spr_snakeenemy_walk_right.yy",
   },
   "solid": false,
   "visible": true,
@@ -27,7 +27,11 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {

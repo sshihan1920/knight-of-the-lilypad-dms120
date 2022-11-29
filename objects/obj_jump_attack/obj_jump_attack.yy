@@ -7,7 +7,7 @@
     "path": "sprites/spr_circular_hitbox/spr_circular_hitbox.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,

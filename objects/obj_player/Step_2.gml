@@ -1,3 +1,5 @@
+persistent = false;
+
 event_inherited();
 
 if (equals_v2(cur_v, new Vector2(0, 0)) && player_state == PlayerState.Move)
