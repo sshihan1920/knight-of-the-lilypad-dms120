@@ -1,0 +1,2 @@
+time = interval;
+timer = time;
