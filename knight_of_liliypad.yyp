@@ -109,6 +109,7 @@
     {"id":{"name":"Macros","path":"scripts/Macros/Macros.yy",},"order":1,},
     {"id":{"name":"spr_roomborder","path":"sprites/spr_roomborder/spr_roomborder.yy",},"order":25,},
     {"id":{"name":"spr_acid_puddle","path":"sprites/spr_acid_puddle/spr_acid_puddle.yy",},"order":67,},
+    {"id":{"name":"rm_room3","path":"rooms/rm_room3/rm_room3.yy",},"order":11,},
     {"id":{"name":"obj_enemy_projectile","path":"objects/obj_enemy_projectile/obj_enemy_projectile.yy",},"order":32,},
     {"id":{"name":"spr_slimeenemy_walk_right","path":"sprites/spr_slimeenemy_walk_right/spr_slimeenemy_walk_right.yy",},"order":47,},
     {"id":{"name":"spr_heart_empty","path":"sprites/spr_heart_empty/spr_heart_empty.yy",},"order":52,},
@@ -134,6 +135,7 @@
     {"roomId":{"name":"rm_room1","path":"rooms/rm_room1/rm_room1.yy",},},
     {"roomId":{"name":"rm_death_screen","path":"rooms/rm_death_screen/rm_death_screen.yy",},},
     {"roomId":{"name":"rm_room2","path":"rooms/rm_room2/rm_room2.yy",},},
+    {"roomId":{"name":"rm_room3","path":"rooms/rm_room3/rm_room3.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},
