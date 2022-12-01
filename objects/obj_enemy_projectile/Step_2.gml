@@ -3,5 +3,7 @@ if (!bbox_right || !bbox_bottom || bbox_left >= room_width || bbox_top >= room_h
 	instance_destroy();
 }
 
-x += move_v.x;
-y += move_v.y;
+x += scale_v2(move_v, timer/time).x;
+y += scale_v2(move_v, timer/time).y;
+
+timer = min(time, timer + 1);
