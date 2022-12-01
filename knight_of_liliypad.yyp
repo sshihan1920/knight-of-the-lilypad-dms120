@@ -120,9 +120,9 @@
     {"id":{"name":"obj_jump_attack","path":"objects/obj_jump_attack/obj_jump_attack.yy",},"order":41,},
   ],
   "Options": [
+    {"name":"operagx","path":"options/operagx/options_operagx.yy",},
     {"name":"Main","path":"options/main/options_main.yy",},
     {"name":"Windows","path":"options/windows/options_windows.yy",},
-    {"name":"operagx","path":"options/operagx/options_operagx.yy",},
   ],
   "defaultScriptType": 1,
   "isEcma": false,
