@@ -58,16 +58,27 @@ collidable = true;
 
 function handle_collision_push(obj_type) {
 	var buffer = 1000;
+	var collision_list = ds_list_create();
 	if (!place_meeting(x, y, obj_type)) return;
 	while(buffer > 0) {
 		buffer--;
 		var collided_obj = instance_place(x, y, obj_type);
+		if (instance_exists(collided_obj) && ds_list_find_index(collision_list, collided_obj) == -1) {
+			ds_list_add(collision_list, collided_obj);
+		} else {
+			break;	
+		}
 		if (variable_instance_exists(collided_obj, "collidable") && !collided_obj.collidable) {
 			continue;
 		}
 		if (instance_exists(collided_obj)) {
 			var push_v = new Vector2(x - collided_obj.x, y - collided_obj.y);
 			while(place_meeting(x, y, collided_obj)) {
+				if (zero_v2(push_v)) {
+					x = x + 1;
+					y = y + 1;
+					break;
+				}
 				x = x + sign(push_v.x);
 				y = y + sign(push_v.y);
 			}
@@ -75,6 +86,7 @@ function handle_collision_push(obj_type) {
 			break;
 		}
 	}
+	ds_list_clear(collision_list);
 }
 
 function handle_collision_x(obj_type, v) {
