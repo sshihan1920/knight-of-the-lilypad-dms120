@@ -96,11 +96,13 @@
     {"id":{"name":"spr_square_hitbox","path":"sprites/spr_square_hitbox/spr_square_hitbox.yy",},"order":59,},
     {"id":{"name":"obj_player_projectile","path":"objects/obj_player_projectile/obj_player_projectile.yy",},"order":39,},
     {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},"order":52,},
+    {"id":{"name":"rm_victory","path":"rooms/rm_victory/rm_victory.yy",},"order":13,},
     {"id":{"name":"spr_snakeenemy_walk_left","path":"sprites/spr_snakeenemy_walk_left/spr_snakeenemy_walk_left.yy",},"order":68,},
     {"id":{"name":"Vector2","path":"scripts/Vector2/Vector2.yy",},"order":4,},
     {"id":{"name":"obj_border","path":"objects/obj_border/obj_border.yy",},"order":20,},
     {"id":{"name":"spr_grapple","path":"sprites/spr_grapple/spr_grapple.yy",},"order":37,},
     {"id":{"name":"spr_trunk_long","path":"sprites/spr_trunk_long/spr_trunk_long.yy",},"order":68,},
+    {"id":{"name":"obj_victory","path":"objects/obj_victory/obj_victory.yy",},"order":57,},
     {"id":{"name":"fn_start_menu","path":"fonts/fn_start_menu/fn_start_menu.yy",},"order":0,},
     {"id":{"name":"spr_key","path":"sprites/spr_key/spr_key.yy",},"order":10,},
     {"id":{"name":"fn_story","path":"fonts/fn_story/fn_story.yy",},"order":1,},
@@ -135,9 +137,10 @@
     {"roomId":{"name":"rm_start_menu","path":"rooms/rm_start_menu/rm_start_menu.yy",},},
     {"roomId":{"name":"rm_story","path":"rooms/rm_story/rm_story.yy",},},
     {"roomId":{"name":"rm_room1","path":"rooms/rm_room1/rm_room1.yy",},},
-    {"roomId":{"name":"rm_death_screen","path":"rooms/rm_death_screen/rm_death_screen.yy",},},
     {"roomId":{"name":"rm_room2","path":"rooms/rm_room2/rm_room2.yy",},},
     {"roomId":{"name":"rm_room3","path":"rooms/rm_room3/rm_room3.yy",},},
+    {"roomId":{"name":"rm_victory","path":"rooms/rm_victory/rm_victory.yy",},},
+    {"roomId":{"name":"rm_death_screen","path":"rooms/rm_death_screen/rm_death_screen.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},
@@ -166,6 +169,6 @@
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"lilypad-20221104-213055.piskel","CopyToMask":-1,"filePath":"datafiles",},
   ],
   "MetaData": {
-    "IDEVersion": "2022.9.1.51",
+    "IDEVersion": "2022.11.0.54",
   },
 }
